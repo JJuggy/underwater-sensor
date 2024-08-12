@@ -1,66 +1,84 @@
-import {
-  Table,
-  TableHeader,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "../../components/ui/table";
+"use client";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
+import { TableDataContext } from "../../context/table-data-context";
+
 export const TableOne = () => {
+  const router = useRouter();
+  const { setTableData } = useContext(TableDataContext);
+
+  const tableData = [
+    {
+      status: "Decreasing rapdily",
+      sensor: "ph Sensor",
+      reading: "-3450 moldm-3",
+      poll: "Acidic",
+    },
+    {
+      status: "Increasing",
+      sensor: "Turbidity",
+      reading: "2.05 NTU",
+      poll: "Cloudy",
+    },
+    {
+      status: "Increasing",
+      sensor: "Temperature",
+      reading: "305oC",
+      poll: "Designer",
+    },
+    {
+      status: "Increasing",
+      sensor: "Dissolved Oxygen Sensor",
+      reading: "350 mg/L",
+      poll: "Within Range",
+    },
+    {
+      status: "Increasing Rapidly",
+      sensor: "Total Dissolved Solids (TDS)",
+      reading: "160 mg/L",
+      poll: "Harmful",
+    },
+  ];
   return (
-    <Table className="">
-      <div className=" w-[95%] flex items-center justify-center">
-        <h1 className="font-semibold text-lg text-black">Site A</h1>
-        <h1 className="font-semibold text-lg text-purple-600">
-          Time: 15 Minutes intervals{" "}
+    <div className="overflow-x-auto px-6 flex flex-col items-center justify-center">
+      <h1 className="text-6xl my-4  ">UWSN DATA TRANSFER RESULTS</h1>
+      <div className="flex justify-between w-full">
+        <h1 className="text-black text-xl font-semibold">Site A</h1>
+        <h1 className="text-purple-700 font-semibold">
+          Time:15 Minutes Intervals
         </h1>
       </div>
-      <TableHeader className="bg-black text-white ">
-        <TableRow>
-          <TableHead className="w-[300px]">Sensors</TableHead>
-          <TableHead>Readings</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead className="text-right">Population Status</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        <TableRow className="bg-gray-100">
-          <TableCell className="font-medium">pH Sensor</TableCell>
-          <TableCell>-3450moldm</TableCell>
-          <TableCell>Decreasing Rapidly</TableCell>
-          <TableCell className="text-right text-red-500">Acidic</TableCell>
-        </TableRow>
-        <TableRow className="bg-gray-300">
-          <TableCell className="font-medium">Turbidity</TableCell>
-          <TableCell>2.05NTU</TableCell>
-          <TableCell>Increasing</TableCell>
-          <TableCell className="text-right text-yellow-600">Cloudy</TableCell>
-        </TableRow>
-        <TableRow className="bg-gray-100">
-          <TableCell className="font-medium">Temperature</TableCell>
-          <TableCell>3.05oC</TableCell>
-          <TableCell>Increasing</TableCell>
-          <TableCell className="text-right text-green-600">
-            Within Range
-          </TableCell>
-        </TableRow>
-        <TableRow className="bg-gray-300">
-          <TableCell className="font-medium">Disolved Oxygen Sensor</TableCell>
-          <TableCell>350mg/L</TableCell>
-          <TableCell>Increasing</TableCell>
-          <TableCell className="text-right text-green-600">
-            Within Range
-          </TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell className="font-medium">
-            Total Disolved Solids(TDS)
-          </TableCell>
-          <TableCell>160mg/L</TableCell>
-          <TableCell>Increasing</TableCell>
-          <TableCell className="text-right text-red-600">Harmful</TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+      <table className="min-w-full bg-white border border-gray-200">
+        <thead className="bg-black text-white font-semibold">
+          <tr className="bg-black ">
+            <th className="py-2 px-4 border-b text-center">Sensors</th>
+            <th className="py-2 px-4 border-b text-center">Readings</th>
+            <th className="py-2 px-4 border-b text-center">Status</th>
+            <th className="py-2 px-4 border-b text-center">Pollution Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableData.map((row) => (
+            <tr className=" bg-gray-100" key={row.status}>
+              <td className="py-2 px-4 border-b text-center">{row.sensor}</td>
+              <td className="py-2 px-4 border-b text-center">{row.reading}</td>
+              <td className="py-2 px-4 border-b text-center">{row.status}</td>
+              <td className="py-2 px-4 border-b text-center ">{row.poll}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="w-full flex items-center justify-center ">
+        <div
+          onClick={() => {
+            router.push("/result");
+            // setTableData(tableData);
+          }}
+          className="px-12 cursor-pointer my-4 self-center py-4 border text-[#7100E3] border-[#7100E3]"
+        >
+          Map Out Polluted Area
+        </div>
+      </div>
+    </div>
   );
 };

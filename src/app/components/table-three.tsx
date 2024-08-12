@@ -1,7 +1,7 @@
-export const TableTwo = () => {
+export const TableThree = () => {
   const tableData = [
     {
-      status: "Decreasing rapdily",
+      status: "Decreasing rapidly",
       sensor: "ph Sensor",
       reading: "-3450 moldm-3",
       poll: "Acidic",
@@ -34,7 +34,7 @@ export const TableTwo = () => {
   return (
     <div className="overflow-x-auto px-6  mt-12 flex flex-col items-center justify-center">
       <div className="flex justify-between w-full">
-        <h1 className="text-black text-xl font-semibold">Site B</h1>
+        <h1 className="text-black text-xl font-semibold">Site C</h1>
         <h1 className="text-purple-700 font-semibold">
           Time:15 Minutes Intervals
         </h1>

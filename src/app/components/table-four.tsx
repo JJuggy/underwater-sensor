@@ -1,4 +1,8 @@
-export const TableTwo = () => {
+"use client";
+import { useRouter } from "next/navigation";
+
+export const TableFour = () => {
+  const router = useRouter();
   const tableData = [
     {
       status: "Decreasing rapdily",
@@ -32,9 +36,10 @@ export const TableTwo = () => {
     },
   ];
   return (
-    <div className="overflow-x-auto px-6  mt-12 flex flex-col items-center justify-center">
+    <div className="overflow-x-auto px-6 flex flex-col items-center justify-center">
+      <h1 className="text-6xl my-4  ">UWSN DATA TRANSFER RESULTS</h1>
       <div className="flex justify-between w-full">
-        <h1 className="text-black text-xl font-semibold">Site B</h1>
+        <h1 className="text-black text-xl font-semibold">Site A</h1>
         <h1 className="text-purple-700 font-semibold">
           Time:15 Minutes Intervals
         </h1>
@@ -59,8 +64,13 @@ export const TableTwo = () => {
           ))}
         </tbody>
       </table>
-      <div className="w-full flex items-center justify-center">
-        <div className="px-12 cursor-pointer my-4 self-center py-4 border text-[#7100E3] border-[#7100E3] ">
+      <div className="w-full flex items-center justify-center ">
+        <div
+          onClick={() => {
+            router.push("/result");
+          }}
+          className="px-12 cursor-pointer my-4 self-center py-4 border text-[#7100E3] border-[#7100E3]"
+        >
           Map Out Polluted Area
         </div>
       </div>
