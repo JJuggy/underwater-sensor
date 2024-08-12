@@ -20,7 +20,7 @@ export const TableFive = () => {
       status: "Increasing",
       sensor: "Temperature",
       reading: "305oC",
-      poll: "Designer",
+      poll: "Cloudy",
     },
     {
       status: "Increasing",
@@ -37,7 +37,6 @@ export const TableFive = () => {
   ];
   return (
     <div className="overflow-x-auto px-6 flex flex-col items-center justify-center">
-      <h1 className="text-6xl my-4  ">UWSN DATA TRANSFER RESULTS</h1>
       <div className="flex justify-between w-full">
         <h1 className="text-black text-xl font-semibold">Site A</h1>
         <h1 className="text-purple-700 font-semibold">

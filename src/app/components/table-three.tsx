@@ -3,20 +3,20 @@ export const TableThree = () => {
     {
       status: "Decreasing rapidly",
       sensor: "ph Sensor",
-      reading: "-3450 moldm-3",
+      reading: "-2450 moldm-3",
       poll: "Acidic",
     },
     {
-      status: "Increasing",
+      status: "Decreasing Rapidly",
       sensor: "Turbidity",
-      reading: "2.05 NTU",
+      reading: "1.05 NTU",
       poll: "Cloudy",
     },
     {
       status: "Increasing",
       sensor: "Temperature",
       reading: "305oC",
-      poll: "Designer",
+      poll: "Cloudy'",
     },
     {
       status: "Increasing",
@@ -27,7 +27,7 @@ export const TableThree = () => {
     {
       status: "Increasing Rapidly",
       sensor: "Total Dissolved Solids (TDS)",
-      reading: "160 mg/L",
+      reading: "360 mg/L",
       poll: "Harmful",
     },
   ];

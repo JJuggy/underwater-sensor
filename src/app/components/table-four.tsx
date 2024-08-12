@@ -13,19 +13,19 @@ export const TableFour = () => {
     {
       status: "Increasing",
       sensor: "Turbidity",
-      reading: "2.05 NTU",
+      reading: "1.05 NTU",
       poll: "Cloudy",
     },
     {
       status: "Increasing",
       sensor: "Temperature",
       reading: "305oC",
-      poll: "Designer",
+      poll: "Within Range",
     },
     {
       status: "Increasing",
       sensor: "Dissolved Oxygen Sensor",
-      reading: "350 mg/L",
+      reading: "250 mg/L",
       poll: "Within Range",
     },
     {
@@ -37,7 +37,6 @@ export const TableFour = () => {
   ];
   return (
     <div className="overflow-x-auto px-6 flex flex-col items-center justify-center">
-      <h1 className="text-6xl my-4  ">UWSN DATA TRANSFER RESULTS</h1>
       <div className="flex justify-between w-full">
         <h1 className="text-black text-xl font-semibold">Site A</h1>
         <h1 className="text-purple-700 font-semibold">

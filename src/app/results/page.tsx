@@ -7,7 +7,7 @@ import { TableFive } from "../components/table-five";
 import { TableDataContext } from "../../context/table-data-context";
 
 function page() {
-  const { tableData } = useContext(TableDataContext);
+  // const { tableData } = useContext(TableDataContext);
   return (
     <div>
       <TableOne />

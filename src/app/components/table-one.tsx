@@ -24,7 +24,7 @@ export const TableOne = () => {
       status: "Increasing",
       sensor: "Temperature",
       reading: "305oC",
-      poll: "Designer",
+      poll: "Within Range",
     },
     {
       status: "Increasing",

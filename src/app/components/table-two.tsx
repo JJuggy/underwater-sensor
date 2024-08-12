@@ -1,33 +1,33 @@
 export const TableTwo = () => {
   const tableData = [
     {
-      status: "Decreasing rapdily",
+      status: "Decreasing rapidly",
       sensor: "ph Sensor",
-      reading: "-3450 moldm-3",
+      reading: "-4050 moldm-3",
       poll: "Acidic",
     },
     {
-      status: "Increasing",
+      status: "Decreasing",
       sensor: "Turbidity",
-      reading: "2.05 NTU",
+      reading: "4.05 NTU",
       poll: "Cloudy",
     },
     {
       status: "Increasing",
       sensor: "Temperature",
       reading: "305oC",
-      poll: "Designer",
+      poll: "Within Range",
     },
     {
-      status: "Increasing",
+      status: "Decreasing",
       sensor: "Dissolved Oxygen Sensor",
-      reading: "350 mg/L",
+      reading: "300 mg/L",
       poll: "Within Range",
     },
     {
       status: "Increasing Rapidly",
       sensor: "Total Dissolved Solids (TDS)",
-      reading: "160 mg/L",
+      reading: "260 mg/L",
       poll: "Harmful",
     },
   ];
