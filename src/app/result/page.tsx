@@ -11,11 +11,11 @@ function page() {
       </div>
       <div className="flex items-center  ">
         <h2 className="font-semibold">Real AUV</h2>
-        <p>X:-190 Y:163.3 Z:191.1</p>
+        <p className="ml-2"> X:-190 Y:163.3 Z:191.1</p>
       </div>
       <div className="flex items-center w-full">
         <h2 className="font-semibold">Localized AUV</h2>
-        <p>X:189.1 Y:167.5 Z:191.5</p>
+        <p className="ml-2"> X:189.1 Y:167.5 Z:191.5</p>
       </div>
       <div className="flex items-end">
         <h1 className="text-purple-700 ml-auto font-semibold">
